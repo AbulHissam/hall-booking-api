@@ -7,6 +7,6 @@ app.use(express.json());
 
 const hallBookingRoutes = require("./routes/hallBookingRoutes");
 app.use("/api", hallBookingRoutes);
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log("Server is up on port", PORT);
 });
